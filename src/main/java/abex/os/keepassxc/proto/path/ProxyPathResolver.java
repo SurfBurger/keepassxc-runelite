@@ -49,7 +49,9 @@ public class ProxyPathResolver
 					|| testOSXBrowser("Chromium")
 					|| testOSXBrowser("Vivaldi")
 					|| testOSXBrowser("BraveSoftware/Brave-Browser")
-					|| testOSXBrowser("Microsoft Edge");
+					|| testOSXBrowser("Microsoft Edge")
+					|| testPath(new File("/Applications/KeePassXC.app/Contents/MacOS/keepassxc-proxy"))
+        			|| testPath(new File(System.getProperty("user.home"), "Applications/KeePassXC.app/Contents/MacOS/keepassxc-proxy"));
 			case Linux:
 			{
 				File home = new File(System.getProperty("user.home"));
